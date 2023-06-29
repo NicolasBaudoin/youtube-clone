@@ -16,7 +16,9 @@ body{
 }
 
 
+/* @navbar */
 nav{
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,7 +28,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2.5vw;
+    padding: 0 0.9vw;
 }
 
 .left{
@@ -90,4 +92,63 @@ nav{
 
 
 
+/* @sidebar */
 
+.sidebar{
+    position: relative;
+    top: 60px;
+    width: 15vw;
+    background: #FFFFFF;
+    max-height: calc(100vh - 60px) ;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.25vw;
+    /* text style */
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    line-height: 20px;
+    
+    
+}
+
+.sidebar-menu{
+    /* position: relative; */
+    display: flex;
+    justify-content: flex-start;
+    width: 11.25vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 15px;
+    
+
+}
+.item{
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    gap: 15px;
+    
+    width: 216px;
+}
+.item:not(#signTnText):not(#signInImage):not(.titleMenu):hover{ 
+    background: #d0d0d0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#signInImage img{
+  padding-top: 30px; 
+  cursor: pointer;
+}
+img{
+    padding: 10px;
+}
